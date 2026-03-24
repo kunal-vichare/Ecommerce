@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignIn from '../screens/Sign/SignIn';
 import SignUp from '../screens/Sign/SignUp';
 import ForgotPassword from '../screens/Sign/ForgotPassword';
+import DrawerTabNavigation from './DrawerTabNavigation';
+import ProductDetails from '../screens/ProductDetails/ProductDetails'
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +31,20 @@ const StackNavigation = () => {
             options={()=>({
                 headerShown:false
             })}
+        />
+        <Stack.Screen 
+            name = 'Product Details Screen'
+            component = {ProductDetails}
+            options={()=>({
+                headerShown:true
+            })}
+        />
+        <Stack.Screen 
+            name = 'Drawer'
+            component = {DrawerTabNavigation}
+            options={{
+                headerShown:false
+            }}
         />
     </Stack.Navigator>
   )

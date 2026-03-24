@@ -6,13 +6,45 @@ import Wishlist from '../screens/BottomTabScreen/Wishlist'
 import Cart from '../screens/BottomTabScreen/Cart'
 import Search from '../screens/BottomTabScreen/Search'
 import Setting from '../screens/BottomTabScreen/Setting'
-
+import Icon from 'react-native-vector-icons/Ionicons'
+const Tab = createBottomTabNavigator();
 
 const BottomTabNavigation = () => {
-    const Tab = createBottomTabNavigator();
+    const getTabBarIcon = (routeName,focused,color,size) => {
+      let iconName;
+      if(routeName==='Home'){
+        iconName = focused ? 'home' : 'home-outline'
+      }
+      else if(routeName==='Wishlist'){
+        iconName = focused ? 'heart' : 'heart-outline'
+      }
+      else if(routeName==='Cart'){
+        iconName = focused ? 'cart' : 'cart-outline'
+      }
+      else if(routeName==='Search'){
+        iconName = focused ? 'search' : 'search-outline'
+      }
+      else if(routeName==='Setting'){
+        iconName = focused ? 'settings' : 'settings-outline'
+      }
+      return <Icon name={iconName} size={size} color={color} />
+    }
   return (
-    <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home}/>
+    <Tab.Navigator 
+      screenOptions={({route})=>({
+        tabBarIcon: ({focused,color,size}) => 
+        getTabBarIcon(route.name,focused,color,size),
+        tabBarActiveTintColor: '#007bff',
+        tabBarInactiveTintColor: 'gray',
+        tabBarStyle : {}
+      })}
+    >
+        <Tab.Screen name="Home" 
+        component={Home}             
+        options={{
+          headerShown:false
+        }}
+        />
         <Tab.Screen name="Wishlist" component={Wishlist}/>
         <Tab.Screen name="Cart" component={Cart}/>
         <Tab.Screen name="Search" component={Search}/>

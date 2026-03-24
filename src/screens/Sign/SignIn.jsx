@@ -42,7 +42,11 @@ const SignIn = () => {
           Forgot Password?
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity 
+        style={styles.loginBtn}
+        // onPress={()=>navigation.navigate("MainScreen")}
+        onPress={()=>navigation.replace("Drawer")}
+      >
         <Text style={styles.loginText}>
           Login
         </Text>

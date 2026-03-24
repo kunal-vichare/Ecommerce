@@ -9,7 +9,6 @@ const App = () => {
   return (
     <NavigationContainer>
       <StackNavigation/>
-      {/* <BottomTabNavigation/> */}
     </NavigationContainer>
   )
 }
