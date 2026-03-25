@@ -5,7 +5,7 @@ import Arrow from 'react-native-vector-icons/FontAwesome6'
 const Corousal = () => {
   return (
     <View style={styles.container}>
-      <View style={{}}>
+      <View style={styles.imageContainer}>
         <Image source={require('../../assets/BottomTab/Corousal1.jpg')} style={styles.img}/>
       </View>
     <View style={styles.text}>
@@ -24,15 +24,15 @@ const Corousal = () => {
 }
 const styles = StyleSheet.create ({
   img : {
-    width:400,
-    // height:350,
-    resizeMode:'contain',
+    width:380,
+    height:170,
+    resizeMode:'stretch',
     borderRadius:20
   },
   container : {
-    height:180,
-    width:400,
-    marginLeft:5,
+    // height:180,
+    // width:400,
+    // marginLeft:5,
     marginTop:10,
     alignItems:'center',
     justifyContent:'center',
@@ -40,8 +40,10 @@ const styles = StyleSheet.create ({
   },
   text : {
     position:'absolute',
-    left:25,
-    top:28
+    left:55,
+    // marginBottom:-80,
+    zIndex:1,
+    top:25
   },
   top : {
     color:'#fff',

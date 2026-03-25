@@ -1,4 +1,4 @@
-import { View, Text,StatusBar, ScrollViewBase, ScrollView } from 'react-native'
+import { View, Text,StatusBar, ScrollViewBase, ScrollView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import Header from '../../components/HomeComponents/Header'
 import SearchBar from '../../components/HomeComponents/SearchBar'

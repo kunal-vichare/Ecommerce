@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     container : {
         // flex:1,
         justifyContent:'space-evenly',
-        flexDirection : 'row'
+        flexDirection : 'row',
+        // backgroundColor:'yellow'
     },
     productContainer:{
         alignItems:'center',

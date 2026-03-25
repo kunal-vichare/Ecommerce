@@ -5,6 +5,7 @@ import SignUp from '../screens/Sign/SignUp';
 import ForgotPassword from '../screens/Sign/ForgotPassword';
 import DrawerTabNavigation from './DrawerTabNavigation';
 import ProductDetails from '../screens/ProductDetails/ProductDetails'
+import Profile from '../components/HomeComponents/SubComponent/Profile'
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,13 @@ const StackNavigation = () => {
         <Stack.Screen 
             name = 'Product Details Screen'
             component = {ProductDetails}
+            options={()=>({
+                headerShown:true
+            })}
+        />
+        <Stack.Screen 
+            name = 'Profile'
+            component = {Profile}
             options={()=>({
                 headerShown:true
             })}

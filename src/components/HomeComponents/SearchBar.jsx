@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     searchBar : {
         // position: 'relative',
         // flexDirection:'row',
-        // backgroundColor: '#fff',
+        // backgroundColor: 'red',
         // marginLeft:15,
         // marginRight:15,
         // alignItems:'center',
@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
         paddingRight :40,
         borderWidth: 1,
         borderRadius: 5,
-        marginTop: 20,
-        marginBottom: 20,
+        // marginTop: 20,
+        // marginBottom: 20,
         backgroundColor : '#fff',
         // marginRight: 12,
         marginLeft: 12,
@@ -47,18 +47,18 @@ const styles = StyleSheet.create({
         // shadowOpacity:5
   },
     searchIcon : {
-        position :'absolute', 
+        // position :'absolute', 
         zIndex:1,
-        top:30,
+        top:33,
         left:20
         // marginTop:18,
         // marginLeft:10,
     },
     micIcon : {
-        position :'absolute', 
+        // position :'absolute', 
         zIndex:1,
-        top:30,
-        right:30
+        top:-35,
+        left: 360
     }
 })
 

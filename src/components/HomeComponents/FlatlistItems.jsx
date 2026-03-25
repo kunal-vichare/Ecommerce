@@ -1,5 +1,5 @@
 import { View, Text, FlatList,Image, StyleSheet } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {getAllProducts} from '../../services/api'
 import { useFocusEffect } from '@react-navigation/native'
 import FlatlistData from '../HomeComponents/SubComponent/FlatlistData'
@@ -31,7 +31,7 @@ const FlatlistItems = () => {
   const numColumns=2
   
   return (
-    <View>
+    <View style={{}}>
       <FlatList 
           data={myData}
           renderItem={({item})=>(
@@ -39,6 +39,7 @@ const FlatlistItems = () => {
           )}
           keyExtractor={(item)=>item.id}
           numColumns={numColumns}
+          columnWrapperStyle={{justifyContent:'space-between'}}
           // refreshing={refreshing}
           // onRefresh={onRefresh}
           // ItemSeparatorComponent={<View style={{height:2,backgroundColor:'#999797'}}/>}
