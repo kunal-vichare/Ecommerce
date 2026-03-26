@@ -26,7 +26,7 @@ const DrawerTabNavigation = () => {
       }}
     >
       <Drawer.Screen name="BottomTabs" component={BottomTabNavigation} />
-      <Drawer.Screen name="Home" component={Home}/>
+      {/* <Drawer.Screen name="Home" component={Home}/> */}
       {/* <Drawer.Screen name="Logout" /> */}
     </Drawer.Navigator>
   )

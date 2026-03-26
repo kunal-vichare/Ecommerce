@@ -3,10 +3,15 @@ import React, { useEffect, useState } from 'react'
 import {getAllProducts} from '../../services/api'
 import { useFocusEffect } from '@react-navigation/native'
 import FlatlistData from '../HomeComponents/SubComponent/FlatlistData'
+import Loader from '../../screens/Loader/Loader'
+// import SearchBar from './SearchBar'
+import Sort_Filter from './Sort_Filter'
+import Category from './Category'
+import Corousal from './Corousal'
 
 const FlatlistItems = () => {
-  const [myData,setMyData] = useState({});
   const [loader,setLoader] = useState(false);
+  const [myData,setMyData] = useState([]);
 
   const loadUsers = async()=>{
     try {
@@ -28,10 +33,20 @@ const FlatlistItems = () => {
       };
     }, [])
   );
+
+  const[refreshing,setRefreshing]= useState(false);
+  const onRefresh = async ()=> {
+    setRefreshing(true);
+    await loadUsers();
+    setRefreshing(false);
+  };
+
   const numColumns=2
   
   return (
     <View style={{}}>
+    {
+      loader ? <Loader/> : 
       <FlatList 
           data={myData}
           renderItem={({item})=>(
@@ -40,10 +55,17 @@ const FlatlistItems = () => {
           keyExtractor={(item)=>item.id}
           numColumns={numColumns}
           columnWrapperStyle={{justifyContent:'space-between'}}
-          // refreshing={refreshing}
-          // onRefresh={onRefresh}
-          // ItemSeparatorComponent={<View style={{height:2,backgroundColor:'#999797'}}/>}
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          ListHeaderComponent={
+            <>
+              <Sort_Filter/>
+              <Category />
+              <Corousal/>
+            </>
+          }
       />
+    }
     </View>
   )
 }

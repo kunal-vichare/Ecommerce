@@ -7,6 +7,7 @@ import Cart from '../screens/BottomTabScreen/Cart'
 import Search from '../screens/BottomTabScreen/Search'
 import Setting from '../screens/BottomTabScreen/Setting'
 import Icon from 'react-native-vector-icons/Ionicons'
+import HomeStack from '../navigation/BottomTabStack/HomeStack'
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigation = () => {
@@ -40,7 +41,8 @@ const BottomTabNavigation = () => {
       })}
     >
         <Tab.Screen name="Home" 
-        component={Home}             
+        // component={Home}
+        component={HomeStack}             
         options={{
           headerShown:false
         }}

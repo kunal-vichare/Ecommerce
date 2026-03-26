@@ -39,22 +39,22 @@ const FlatlistData = ({item}) => {
 }
 const styles = StyleSheet.create({
   container:{
+    flex:1,
     // height:600
     // width:'100%',
-    flex:1,
     // flexDirection:'row'
   },
   image : {
     // flex:1,
     height:110, 
-    width:'100%',
+    width:'85%',
     // borderRadius:55,
     // marginLeft:10,
     resizeMode:'contain'
   },
   productContainer : {
-    // flex:1,
-    width:180,
+    flex:1,
+    // width:180,
     margin:8,
     backgroundColor:'#fff',
     padding:12,
