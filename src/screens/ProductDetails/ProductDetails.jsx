@@ -10,6 +10,7 @@ const ProductDetails = () => {
   const route = useRoute();
   const item = route.params?.item;
   const navigation = useNavigation();
+  // console.log("Products: "+Products)
   
   const perc = item.rating.rate/0.05;
   const rating = 
@@ -69,14 +70,14 @@ const ProductDetails = () => {
           <Text style={styles.cartText}>Go to cart</Text>
         </TouchableOpacity>
         </View>
-        <View style={styles.buySingleBtn}>
+        {/* <View style={styles.buySingleBtn}>
            <Buy name="touch-app" size={40} style={styles.buyCart}/>
         <TouchableOpacity
           style={styles.buyBtn}
         >
           <Text style={styles.cartText}>Buy Now</Text>
         </TouchableOpacity>
-        </View>
+        </View> */}
         </View>
       
     </View>

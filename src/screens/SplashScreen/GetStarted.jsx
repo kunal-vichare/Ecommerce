@@ -1,16 +1,17 @@
 import { View, Text, TouchableOpacity,Image, ImageBackground, StyleSheet} from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import {height, width} from '../../constants'
 
 const GetStarted = () => {
     const navigation = useNavigation();
   return (
     <View style={{flex:1}}>
-      {/* <ImageBackground 
+      <ImageBackground 
         source={require("../../assets/Splash Screen/GetStarted.png")}
         style={styles.image}
         resizeMode='contain'
-      > */}
+      >
         <Text style={styles.headText}>
             You want Authentic, here you go!
         </Text>
@@ -25,14 +26,14 @@ const GetStarted = () => {
                 Get Started
             </Text>
         </TouchableOpacity>
-    {/* </ImageBackground> */}
+    </ImageBackground>
     </View>
   )
 }
 const styles = StyleSheet.create({
     image : {
-        height:'100%',
-        width:'100%'
+        height: height.bgH,
+        width:width.bgW
     },
     headText:{
         fontWeight:'600',

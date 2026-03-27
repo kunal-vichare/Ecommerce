@@ -8,16 +8,21 @@ import Loader from '../../screens/Loader/Loader'
 import Sort_Filter from './Sort_Filter'
 import Category from './Category'
 import Corousal from './Corousal'
+import { useDispatch,useSelector } from 'react-redux'
+import { setProducts } from '../../redux/slice/ProductSlice'
 
 const FlatlistItems = () => {
   const [loader,setLoader] = useState(false);
-  const [myData,setMyData] = useState([]);
+  // const [myData,setMyData] = useState([]);
+  const dispatch = useDispatch();
+  const Products = useSelector((state)=>state.Products.item)
 
   const loadUsers = async()=>{
     try {
       setLoader(true);
       const data = await getAllProducts();
-      setMyData(data);
+      // setMyData(data);
+      dispatch(setProducts(data))
     } catch (error) {
       console.log(error)
     } finally {
@@ -48,9 +53,9 @@ const FlatlistItems = () => {
     {
       loader ? <Loader/> : 
       <FlatList 
-          data={myData}
+          data={Products}
           renderItem={({item})=>(
-          <FlatlistData item={item} />         
+          <FlatlistData item={item} />  
           )}
           keyExtractor={(item)=>item.id}
           numColumns={numColumns}
@@ -61,7 +66,6 @@ const FlatlistItems = () => {
             <>
               <Sort_Filter/>
               <Category />
-              <Corousal/>
             </>
           }
       />

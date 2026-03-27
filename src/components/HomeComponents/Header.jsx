@@ -16,7 +16,10 @@ const Header = () => {
           Stylish
         </Text>
       </View>
-      <TouchableOpacity onPress={()=>navigation.navigate('Profile')}>
+      <TouchableOpacity 
+        // onPress={()=>navigation.navigate('Profile')}
+        onPress={()=>navigation.navigate('Counter')}
+      >
       <Image source={require('../../assets/BottomTab/Profile.png')} style={{height:30,width:30,resizeMode:'stretch'}}/>
       </TouchableOpacity>
     </View>

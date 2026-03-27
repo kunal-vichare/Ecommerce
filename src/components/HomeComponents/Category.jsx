@@ -6,34 +6,34 @@ const Category = () => {
     <View style={styles.container}>
         <View style={styles.productContainer}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Image source={require('../../assets/BottomTab/Beauty.png')} style={styles.img}/>
+                <Image source={require('../../assets/BottomTab/Mens.png')} style={styles.img}/>
             </TouchableOpacity>
-            <Text style={styles.text}>Beauty</Text>
+            <Text style={styles.text}>Men's Cloth</Text>
         </View>
         <View style={styles.productContainer}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Image source={require('../../assets/BottomTab/Fashion.jpg')} style={styles.img}/>
+                <Image source={require('../../assets/BottomTab/Jewelery.png')} style={styles.img}/>
             </TouchableOpacity>
-            <Text style={styles.text}>Fashion</Text>
+            <Text style={styles.text}>Jewelery</Text>
         </View>
         <View style={styles.productContainer}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Image source={require('../../assets/BottomTab/kids.jpg')} style={styles.img}/>
+                <Image source={require('../../assets/BottomTab/Electronics.png')} style={styles.img}/>
             </TouchableOpacity>
-            <Text style={styles.text}>Kids</Text>
+            <Text style={styles.text}>Electronics</Text>
         </View>
         <View style={styles.productContainer}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Image source={require('../../assets/BottomTab/Mens.jpg')} style={styles.img}/>
+                <Image source={require('../../assets/BottomTab/Women.png')} style={styles.img}/>
             </TouchableOpacity>
-            <Text style={styles.text}>Mens</Text>
+            <Text style={styles.text}>Women's Cloth</Text>
         </View>
-        <View style={styles.productContainer}>
+        {/* <View style={styles.productContainer}>
             <TouchableOpacity style={styles.btnContainer}>
                 <Image source={require('../../assets/BottomTab/Women.jpg')} style={styles.img}/>
             </TouchableOpacity>
             <Text style={styles.text}>Womens</Text>
-        </View>
+        </View> */}
     </View>
   )
 }
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         width:60,
         borderRadius:30,
         // borderWidth:1,
-        resizeMode:'cover'
+        resizeMode:'contain'
     },
     text : {
         fontWeight:'600',

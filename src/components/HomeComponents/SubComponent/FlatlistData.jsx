@@ -6,6 +6,8 @@ import Icon from 'react-native-vector-icons/Ionicons'
 const FlatlistData = ({item}) => {
     const navigation = useNavigation();
     const [heart,setHeart] = useState(false);
+    const wishListArr = [];
+    
   return (
     <View style={styles.container}>
         <TouchableOpacity 

@@ -47,10 +47,24 @@ const BottomTabNavigation = () => {
           headerShown:false
         }}
         />
-        <Tab.Screen name="Wishlist" component={Wishlist}/>
-        <Tab.Screen name="Cart" component={Cart}/>
-        <Tab.Screen name="Search" component={Search}/>
-        <Tab.Screen name="Setting" component={Setting}/>
+        <Tab.Screen name="Wishlist" 
+          component={Wishlist}
+          options={{
+          headerShown:false
+        }}
+        />
+        <Tab.Screen name="Cart" 
+        component={Cart}
+        options={{
+          headerShown:false
+        }}
+        />
+        <Tab.Screen name="Search" 
+        component={Search} 
+        options={{
+          headerShown:false
+        }}/>
+        {/* <Tab.Screen name="Setting" component={Setting}/> */}
     </Tab.Navigator>
   )
 }
